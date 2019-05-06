@@ -5,7 +5,7 @@ const connection = require("./connection");
 const findAll = () => {
   // create a new Promise
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM cats', function(err, dbBurgerData) {
+    connection.query('SELECT * FROM burgers', function(err, dbBurgerData) {
       if (err) {
         // this will throw to a .catch()
         return reject(err);
@@ -52,4 +52,10 @@ const update = (devoured, burgerId) => {
       };
     });
   });
+};
+
+module.exports = {
+  findAll,
+  create,
+  update
 };
