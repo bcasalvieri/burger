@@ -18,14 +18,14 @@
 
         {{!-- Inner left column for burgers waiting to be devoured --}}
         <div class="col-12 col-md-6">
-          <h2>Burgers Waiting To Be Devoured</h2>
+          <h2 class="mb-3">Waiting To Be Devoured</h2>
           <ul class="list-group">
             {{#each burgerData}}
               {{#unless devoured}}
               <li class="list-group-item d-flex">
                 {{burger_name}}
                 <span class="ml-auto">
-                  <button class="btn btn-sm btn-warning devour-burger" data-id="{{id}}">😋 Devour It!</button>
+                  <button class="btn btn-sm btn-warning devour-burger" data-id="{{id}}" data-devoured="true">😋 Devour It!</button>
                 </span>
               </li>
               {{/unless}}
@@ -35,7 +35,7 @@
 
         {{!-- Inner right column for burgers that have been devoured --}}
         <div class="col-12 col-md-6">
-          <h2>Burgers You've Devoured</h2>
+          <h2 class="mb-3">Already Devoured</h2>
           <ul class="list-group">
             {{#each burgerData}}
               {{#if devoured}}
@@ -53,4 +53,4 @@
   </div>
 </div>
 
-<script src="../public/assets/js/burgers.js"></script>
+<script src="./assets/js/burgers.js"></script>
