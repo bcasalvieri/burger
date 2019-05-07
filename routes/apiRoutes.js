@@ -14,7 +14,7 @@ module.exports = app => {
 
   // CREATE/POST a new burger
   app.post("/api/burgers", function (req, res) {
-    burgers.create()
+    burgers.create(req.body)
     .then(dbBurgerData => res.json(dbBurgerData))
     .catch(err => {
       console.log(err);
