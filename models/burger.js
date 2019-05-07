@@ -1,4 +1,4 @@
-const connection = require("./connection");
+const connection = require("../config/connection");
 
 // create a function that reads from the burgers table
 // SELECT * FROM burgers
